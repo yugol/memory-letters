@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="board_background">#457842</color>
+    <color name="tile_background">#87704a</color>
+    <color name="tile_foreground">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

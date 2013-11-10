@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_quit"
+        android:onClick="onQuit"
+        android:orderInCategory="500"
+        android:title="@string/action_quit"/>
+
+</menu>
