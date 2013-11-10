@@ -20,6 +20,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import com.appspot.mindtrips.memoryletters.model.persistence.DatabaseAdapter;
+import com.appspot.mindtrips.memoryletters.model.persistence.Settings;
 import com.appspot.mindtrips.memoryletters.util.ActivityUtil;
 
 public class ResultsActivity extends FragmentActivity implements ActionBar.TabListener {
@@ -116,6 +117,7 @@ public class ResultsActivity extends FragmentActivity implements ActionBar.TabLi
             boolean italic = false;
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
+
                 case 0:
                     for (int i = 0, normal = 0, high = 0; i < 2 * N; i++) {
                         if (normal < N && high < N && cursorEN.getCount() > normal && cursorEH.getCount() > high) {
@@ -256,6 +258,7 @@ public class ResultsActivity extends FragmentActivity implements ActionBar.TabLi
                         cursorActual.moveToNext();
                     }
                     break;
+
             }
             db.close();
 
@@ -335,6 +338,21 @@ public class ResultsActivity extends FragmentActivity implements ActionBar.TabLi
                             .setText(rSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+        final Settings settings = Settings.getInstance(this);
+        int currentItem = 0;
+        switch (settings.getBoardSize()) {
+            case LARGE:
+                currentItem = 2;
+                break;
+            case SMALL:
+                currentItem = 0;
+                break;
+            default:
+                currentItem = 1;
+                break;
+        }
+        rViewPager.setCurrentItem(currentItem);
     }
 
 }
