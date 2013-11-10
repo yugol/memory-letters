@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="about">about M.L.</string>
+    <string name="about">about this app</string>
+    <string name="about_text">Memory Letters is a simple app designed to entertain the user and help the developer to discover the Android universe.</string>
     <string name="action_quit">Quit</string>
     <string name="app_name">Memory Letters</string>
     <string name="application"></string>
@@ -18,21 +19,21 @@
     <string name="learn">Learn more</string>
     <string name="preferences">settings</string>
     <string name="results">results</string>
+    <string name="results_date">Date</string>
+    <string name="results_time">Time</string>
     <string name="see_best">See best</string>
     <string name="start_new_round">start a new round</string>
     <string name="title_activity_about">Memory Letters</string>
     <string name="title_activity_play">Memory Letters</string>
     <string name="title_activity_results">Memory Letters (Results)</string>
     <string name="title_activity_settings">Memory Letters (Settings)</string>
+    <string name="title_results_large">Large</string>
+    <string name="title_results_medium">Medium</string>
+    <string name="title_results_small">Small</string>
     <string name="title_section1">About</string>
     <string name="title_section2">Usage</string>
     <string name="title_section3">Share</string>
-    <string name="title_results_small">Small</string>
-    <string name="title_results_medium">Medium</string>
-    <string name="title_results_large">Large</string>
-    <string name="results_date">Date</string>
-    <string name="results_time">Time</string>
-    <string name="welcome_message">Whether you want to exercise your memory skills or simply relax for a couple of minutes Memory Letters is right at your finger-tips.</string>
+    <string name="welcome_message">Whether you want to <b>exercise</b> your memory skills or simply <i>relax</i> for a couple of minutes Memory Letters is right at your finger-tips.</string>
     <string name="what_to_do">So, what would you like to do?&#8230;</string>
 
 </resources>

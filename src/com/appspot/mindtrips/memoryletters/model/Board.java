@@ -40,7 +40,7 @@ public class Board {
     private static Random rand = new Random();
 
     private static void shuffleSymbols(final char[] symbols, final int slicePos) {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 5000; ++i) {
             final int pos1 = rand.nextInt(slicePos);
             final int pos2 = rand.nextInt(slicePos);
             if (pos1 != pos2) {

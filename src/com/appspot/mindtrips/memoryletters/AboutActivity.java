@@ -27,7 +27,7 @@ public class AboutActivity extends FragmentActivity implements ActionBar.TabList
         /**
          * The fragment argument representing the section number for this fragment.
          */
-        public static final String ARG_SECTION_NUMBER = "section_number";
+        public static final String ARG_SECTION_TEXT = "section_text";
 
         public DummySectionFragment() {
         }
@@ -36,7 +36,7 @@ public class AboutActivity extends FragmentActivity implements ActionBar.TabList
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_about_dummy, container, false);
             final TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
-            dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            dummyTextView.setText(getArguments().getString(ARG_SECTION_TEXT));
             return rootView;
         }
     }
@@ -64,7 +64,7 @@ public class AboutActivity extends FragmentActivity implements ActionBar.TabList
             // below) with the page number as its lone argument.
             final Fragment fragment = new DummySectionFragment();
             final Bundle args = new Bundle();
-            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+            args.putString(DummySectionFragment.ARG_SECTION_TEXT, getString(R.string.about_text));
             fragment.setArguments(args);
             return fragment;
         }
